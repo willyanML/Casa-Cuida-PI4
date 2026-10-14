@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "UNIVESP Projeto Integrador - Casa Cuida",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 50, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -50, "left": 160, "attrs": { "temperature": "25.0", "humidity": "82.0" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht:VCC", "esp:3V3", "red", [ "v-10", "h-140" ] ],
+    [ "dht:GND", "esp:GND.1", "black", [ "v-20", "h-150" ] ],
+    [ "dht:SDA", "esp:4", "green", [ "v-30", "h-120" ] ]
+  ]
+}

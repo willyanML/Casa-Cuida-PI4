@@ -1,0 +1,93 @@
+{
+    "modelo_escolhido": "Random Forest Classifier",
+    "features": [
+        "temperatura",
+        "umidade",
+        "ponto_orvalho",
+        "vpd",
+        "delta_orvalho"
+    ],
+    "classes": {
+        "0": "Ambiente Seguro / Confortável",
+        "1": "Alerta: Ar Seco / Risco Respiratório",
+        "2": "Alerta Crítico: Risco de Mofo"
+    },
+    "metricas": {
+        "acuracia": 0.9975,
+        "f1_score_macro": 0.9971,
+        "cv_score": 0.9997,
+        "total_treino": 3200,
+        "total_teste": 800
+    },
+    "comparativo_modelos": [
+        {
+            "modelo": "Random Forest",
+            "acuracia": 0.9975,
+            "f1_macro": 0.9971,
+            "cv_score": 0.9997
+        },
+        {
+            "modelo": "Gradient Boosting",
+            "acuracia": 0.9962,
+            "f1_macro": 0.9957,
+            "cv_score": 0.9984
+        }
+    ],
+    "matriz_confusao": [
+        [
+            282,
+            0,
+            2
+        ],
+        [
+            0,
+            322,
+            0
+        ],
+        [
+            0,
+            0,
+            194
+        ]
+    ],
+    "importancia_atributos": {
+        "temperatura": 0.0321,
+        "umidade": 0.2042,
+        "ponto_orvalho": 0.0749,
+        "vpd": 0.4139,
+        "delta_orvalho": 0.2749
+    },
+    "relatorio_classificacao": {
+        "0": {
+            "precision": 1.0,
+            "recall": 0.9929577464788732,
+            "f1-score": 0.9964664310954063,
+            "support": 284.0
+        },
+        "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 322.0
+        },
+        "2": {
+            "precision": 0.9897959183673469,
+            "recall": 1.0,
+            "f1-score": 0.9948717948717949,
+            "support": 194.0
+        },
+        "accuracy": 0.9975,
+        "macro avg": {
+            "precision": 0.9965986394557823,
+            "recall": 0.9976525821596244,
+            "f1-score": 0.9971127419890671,
+            "support": 800.0
+        },
+        "weighted avg": {
+            "precision": 0.9975255102040816,
+            "recall": 0.9975,
+            "f1-score": 0.9975019932952796,
+            "support": 800.0
+        }
+    }
+}
