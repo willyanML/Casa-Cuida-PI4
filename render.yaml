@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: casa-cuida-pi4
+    runtime: python
+    plan: free
+    region: ohio
+    buildCommand: "bash ./build.sh"
+    startCommand: "uvicorn src.ingestion_api:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: NODE_VERSION
+        value: 22
+      - key: IOT_API_KEY
+        value: casa-cuida-esp32-key-2026
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        value: 250328
+      - key: DATABASE_URL
+        sync: false
