@@ -1,0 +1,67 @@
+# Ambientes Virtuais e Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+
+# Bancos de dados e arquivos locais
+data/*.db
+data/*.sqlite3
+data/*.db-journal
+
+# Documentos acadêmicos internos e relatórios
+*.docx
+*.pdf
+Modelos de documento/
+Relatorios de entrega/
+GUIA_E_DOCUMENTACAO_RELATORIOS_PI.md
+capture_system_screenshots.py
+fill_termo_consentimento.py
+generate_relatorio_parcial.py
+
+# Variáveis de ambiente e segredos
+.env
+.env.local
+.neon/
+
+# Frontend / Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testes e IDEs
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.neon
+.agents/
+skills-lock.json
+package-lock.json
+node_modules/
